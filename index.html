@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do App </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="page-center">
+    <h1> Your To-Do App</h1>
+    <input type="text" id="usernameInput" placeholder="Enter your username" />
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- Welcome Page -->
+  <div id="welcomePage" class="page-center hidden">
+    <h1>Welcome, <span id="userDisplay"></span>! 👋</h1>
+    <button id="getStartedBtn" class="btn-primary">Get Started</button>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+
+  <!-- To-Do App -->
+  <div id="todoApp" class="todo-app hidden">
+    <header> 
+      <h2>📝 <span id="userDisplayTodo"></span>'s To-Do List</h2>
+      <label class="dark-toggle">
+        🌗 Dark Mode
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="toggle-slider"></span>
+      </label>
+      <button id="logoutBtn2" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="task-input"><br>
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <input type="datetime-local" id="taskDateTime" />
+      <button id="addTaskBtn" class="btn-primary">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="info">
+      <p id="taskStats">Completed 0 out of 0 tasks</p>
+      <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+
+    <button id="resetBtn" class="reset">Reset All Tasks</button>
+    <p id="funFact" class="fun-fact"></p>
+    <p id="achievement" class="achievement"></p>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="soundAdd" src="https://actions.google.com/sounds/v1/cartoon/cartoon_cowbell.ogg"></audio>
+  <audio id="soundComplete" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle_to_drum.ogg"></audio>
+  <audio id="soundDelete" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
